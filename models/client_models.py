@@ -22,3 +22,7 @@ class GPSItem(BaseModel):
 
 class GPSTraceResponse(BaseModel):
     gps : List[GPSItem]
+
+class EmergencyPushRequest(BaseModel):
+    device_id: str
+    emergency_id: str
