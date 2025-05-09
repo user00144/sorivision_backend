@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
-from typing import List
+from typing import List, Dict
 
 
 class ContentDetailResponse(BaseModel):
@@ -22,3 +22,7 @@ class GPSItem(BaseModel):
 
 class GPSTraceResponse(BaseModel):
     gps : List[GPSItem]
+
+class CalendarByDayResponse(BaseModel):
+    contents_by_day: Dict[str, List[str]]
+
